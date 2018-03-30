@@ -7,11 +7,16 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import de.android.ayrathairullin.catchtheball.managers.GameManager;
+import de.android.ayrathairullin.catchtheball.managers.InputManager;
 
 public class CatchTheBall extends ApplicationAdapter {
 	SpriteBatch batch;
 	OrthographicCamera camera;
-	
+
+	public CatchTheBall() {
+		Gdx.input.setInputProcessor(new InputManager(camera));
+	}
+
 	@Override
 	public void create () {
 		float height = Gdx.graphics.getHeight();

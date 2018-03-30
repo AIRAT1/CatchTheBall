@@ -14,4 +14,12 @@ public class Basket {
     public void setPosition(float x, float y) {
         basketSprite.setPosition(x, y);
     }
+
+    public void handleTouch(float x, float y) {
+        if (x - (basketSprite.getWidth() / 2) > 0.0) {
+            setPosition(x - (basketSprite.getWidth() / 2), 0);
+        }else {
+            setPosition(0, 0);
+        }
+    }
 }
