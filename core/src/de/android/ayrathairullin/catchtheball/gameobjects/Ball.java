@@ -33,6 +33,7 @@ public class Ball {
     public boolean checkCollisionsWithGround() {
         if (position.y <= 0.0f) {
             GameManager.groundHitSound.play(.1f);
+            GameManager.score--;
             isAlive = false;
             return true;
         }
