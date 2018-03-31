@@ -91,9 +91,6 @@ public class GameManager {
         TextManager.displayMessage(batch);
 
         backButtonSprite.draw(batch);
-
-        prefs.putInteger("highscore", score);
-        prefs.flush();
     }
 
     public static void dispose() {
@@ -106,5 +103,8 @@ public class GameManager {
         basketHitSound.dispose();
         backgroundMusic.dispose();
         balls.clear();
+
+        prefs.putInteger("highscore", score);
+        prefs.flush();
     }
 }
